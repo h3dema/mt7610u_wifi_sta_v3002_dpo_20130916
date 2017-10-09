@@ -44,10 +44,12 @@ Ubuntu: sudo apt-get install git build-essential
 $ mkdir ~/src
 $ cd ~/src
 $ git clone https://github.com/Myria-de/mt7610u_wifi_sta_v3002_dpo_20130916.git
+$ cd mt7610u_wifi_sta_v3002_dpo_20130916
 $ make
-$ make install
-$ cp RT2870STA.dat  /etc/Wireless/RT2870STA/RT2870STA.dat
-$ reboot
+$ sudo make install
+$ sudo mkdir -p /etc/Wireless/RT2870STA/
+$ sudo cp RT2870STA.dat  /etc/Wireless/RT2870STA/RT2870STA.dat
+$ sudo reboot
 ```
 refer to：
 http://hprath.com/2014/06/cisco-linksys-ae6000-ac580-media-tek-mt7610u-mt7630u-mt7650u-linux-x64-driver-patch/
