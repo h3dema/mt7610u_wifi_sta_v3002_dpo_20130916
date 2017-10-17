@@ -64,6 +64,7 @@ $ cd ~/src
 $ git clone https://github.com/Myria-de/mt7610u_wifi_sta_v3002_dpo_20130916.git
 $ cd mt7610u_wifi_sta_v3002_dpo_20130916
 $ git checkout 4606187110b323c272aed504144ee759b31af8ac
+$ make
 $ sudo make install
 $ sudo mkdir -p /etc/Wireless/RT2870STA/
 $ sudo cp RT2870STA.dat  /etc/Wireless/RT2870STA/RT2870STA.dat
