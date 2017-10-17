@@ -58,6 +58,7 @@ $ sudo reboot
 For my ubuntu 14.04, there is one step missing.  The newest version doesn't work for me, so I have to checkout an older version:
 
 ```
+$ sudo apt-get install -y build-essential git
 $ mkdir ~/src
 $ cd ~/src
 $ git clone https://github.com/Myria-de/mt7610u_wifi_sta_v3002_dpo_20130916.git
