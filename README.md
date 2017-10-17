@@ -39,7 +39,10 @@ Modified usb wifi driver for TP-Link TL-WDN5200 AC600 T2U and Cisco Linksys AE60
 #prepare
 Ubuntu: sudo apt-get install git build-essential
 
-# how to use
+# How to install it
+
+The following procedure should download, compile and install the driver.
+
 ```
 $ mkdir ~/src
 $ cd ~/src
@@ -51,6 +54,21 @@ $ sudo mkdir -p /etc/Wireless/RT2870STA/
 $ sudo cp RT2870STA.dat  /etc/Wireless/RT2870STA/RT2870STA.dat
 $ sudo reboot
 ```
+
+For my ubuntu 14.04, there is one step missing.  The newest version doesn't work for me, so I have to checkout an older version:
+
+```
+$ mkdir ~/src
+$ cd ~/src
+$ git clone https://github.com/Myria-de/mt7610u_wifi_sta_v3002_dpo_20130916.git
+$ cd mt7610u_wifi_sta_v3002_dpo_20130916
+$ git checkout 4606187110b323c272aed504144ee759b31af8ac
+$ sudo make install
+$ sudo mkdir -p /etc/Wireless/RT2870STA/
+$ sudo cp RT2870STA.dat  /etc/Wireless/RT2870STA/RT2870STA.dat
+$ sudo reboot
+```
+
 refer to：
 http://hprath.com/2014/06/cisco-linksys-ae6000-ac580-media-tek-mt7610u-mt7630u-mt7650u-linux-x64-driver-patch/
 On this page you'll find also details about configuration in RT2870STA.dat.
